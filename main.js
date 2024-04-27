@@ -8,7 +8,7 @@ form.addEventListener('submit', (e) => {
   let messages = {};
   if (names.value === '' || names.value == null || names.value .trim() === "") {
     messages.name = 'Name is required';
-  }
+  } 
 
   if (password.value.length <= 6) {
     messages.password = 'Password must be longer than 6 characters';
@@ -26,8 +26,12 @@ form.addEventListener('submit', (e) => {
     console.log(messages);
     e.preventDefault();
     //errorElement.innerText = messages.join(', ');
-
+    if(messages.name )
     errorElement.innerText = messages.name;
     errorElementpassword.innerText = messages.password;
+  }else {
+    messages.name = "";
+    //messages.name = ' ';
   }
+
 })
