@@ -2,7 +2,7 @@ const name = document.getElementById('names');
 const password = document.getElementById('password');
 const password1 = document.getElementById('password1');
 
-const form = document.getElementById('form');
+const form = document.getElementById('register');
 const errorElement = document.getElementById('error');
 const errorElementpassword = document.getElementById('errorP');
 const errorElementpassword1 = document.getElementById('errorP1');

@@ -8,29 +8,38 @@
 	</head>
 
     <body>
+      
+        <link rel="stylesheet" href="style.css">
+
+
+<div class="container">
+    <div class="form_box">
         <div class="errorMessage" id="error"></div>
         <div class="errorMessage" id="errorP"></div>
         <div class="errorMessage" id="errorP1"></div>
-        <link rel="stylesheet" href="style.css">
-        <form id="form" method="GET">
-        <div>
-            <label for="names">Name</label>
-            <input id="names" name="name" type="text" autocomplete="name" required>
+        <form id="register" class="input_group" method="GET">
+        <div class="form_div">
+            <label class="form_label" for="names">Name</label>
+            <input id="names" class="form_input" name="name" type="text" autocomplete="name" required>
         </div>
 
-        <div>
-            <label for="password">Password</label>
-            <input id="password" name="password" type="password">
+        <div class="form_div">
+            <label class="form_label" for="password">Password</label>
+            <input id="password" class="form_input" name="password" type="password">
         </div>
 
-        <div>
-            <label for="password1">Password</label>
-            <input id="password1" name="password" type="password">
+        <div class="form_div">
+            <label class="form_label" for="password1">Password</label>
+            <input id="password1" class="form_input" name="password" type="password">
         </div>
         <button type="submit">Submit</button>
         </form>
+    </div>
+</div>
+
 
 
         <script src="main.js"></script>
+
     </body>
 </html>
