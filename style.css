@@ -98,3 +98,36 @@ html {
   z-index: 1;
   transition: 0.3s;
 }
+
+.form_label {
+    
+    left: 1.6rem;
+    top: 1.6rem;
+    padding: 0 0.4rem;
+    background-color: transparent;
+    color: var(--black_color);
+    font-size: 1.6rem;
+    transition: 0.3s;
+}
+
+.submit_btn {
+    width: 85%;
+    position: relative;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background-color:transparent;
+    box-shadow: 0 0 2rem 0.9rem #1b1f2955;
+    border: 0;
+    outline: none;
+    overflow: hidden;
+    font-weight: 600;
+    border-radius: 3rem;
+    transition: 0.5s;
+}
+
+.submit_btn:hover {
+    color: var(--white_color);
+    background-color: var(--orange-color);
+}
