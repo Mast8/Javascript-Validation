@@ -15,24 +15,35 @@
 <div class="container">
     <div class="form_box">
         <form id="register" class="input_group" method="GET">
-        <div class="errorMessage" id="error"></div>
-        <div class="errorMessage" id="errorP"></div>
-        <div class="errorMessage" id="errorP1"></div>
+       
+        
+        
         
         <div class="form_div">
+            <div class="errorMessage" id="error"></div>
             <label class="form_label" for="names">Name</label>
             <input id="names" class="form_input" name="name" type="text" autocomplete="name" required>
         </div>
 
         <div class="form_div">
+            <div class="errorMessage" id="errorEm"></div>
+            <label class="form_label" for="email">Email</label>
+            <input id="email" class="form_input" name="email" autocomplete="email">
+        </div>
+
+        <div class="form_div">
+            <div class="errorMessage" id="errorP"></div>
             <label class="form_label" for="password">Password</label>
             <input id="password" class="form_input" name="password" type="password">
         </div>
 
         <div class="form_div">
+            <div class="errorMessage" id="errorP1"></div>
             <label class="form_label" for="password1">Repeat Password</label>
             <input id="password1" class="form_input" name="password" type="password">
         </div>
+
+
         <button class="submit_btn" type="submit">Submit</button>
         </form>
     </div>

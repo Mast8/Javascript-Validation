@@ -1,11 +1,13 @@
 const name = document.getElementById('names');
 const password = document.getElementById('password');
 const password1 = document.getElementById('password1');
+const email = document.getElementById('email');
 
 const form = document.getElementById('register');
 const errorElement = document.getElementById('error');
 const errorElementpassword = document.getElementById('errorP');
 const errorElementpassword1 = document.getElementById('errorP1');
+const errorElementEmail= document.getElementById('errorEm');
 
 form.addEventListener('submit', (e) => {
 
@@ -31,6 +33,11 @@ form.addEventListener('submit', (e) => {
   if( password1.value !== password.value ) {
     messages.password1 = 'Passwords are not equal';
   }else errorElementpassword1.innerText = "";
+  let re = /\S+@\S+\.\S+/;
+
+  if( !re.test(email.value)  ){
+    messages.email = 'Has to be a valid email';
+  } else errorElementEmail.innerText = "";
 
   //if there are errors 
   if (Object.keys(messages).length > 0) {
@@ -43,6 +50,8 @@ form.addEventListener('submit', (e) => {
       errorElementpassword.innerText = messages.password;
     if(messages.password1 )
       errorElementpassword1.innerText = messages.password1;
+    if( messages.email)
+      errorElementEmail.innerText = messages.email;
   } 
 
 })

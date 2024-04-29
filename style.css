@@ -3,6 +3,7 @@
 /* Background Styles Only */
 
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap');
 
 * {
     font-family: Raleway;
@@ -16,7 +17,7 @@
 
 
 /*-----------------  GOOGLE FONTS  -----------------*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;600&display=swap');
+
 
 /*-----------------  VARIABLES  -----------------*/
 :root {
@@ -70,13 +71,7 @@ html {
    
 }
 
-.btn_box {
-    width: 22rem;
-    margin: 3.5rem auto;
-    position: relative;
-    box-shadow: 0 0 2rem 0.9rem #1b1f2955;
-    border-radius: 3rem;
-}
+
 
 .input_group {
   top: 18rem;
