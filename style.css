@@ -10,6 +10,7 @@
 
 
 .errorMessage {
+    font-weight: 600;
     color: crimson;
 }
 
@@ -64,6 +65,8 @@ html {
     border-radius: 1.6rem;
     box-shadow: 0 0.4rem 3rem rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0.5rem);
+    display: flex;
+    justify-content: center;
    
 }
 
@@ -112,7 +115,7 @@ html {
 
 .submit_btn {
     width: 85%;
-    position: relative;
+  
     padding: 1rem 3rem;
     cursor: pointer;
     display: block;
@@ -121,10 +124,10 @@ html {
     box-shadow: 0 0 2rem 0.9rem #1b1f2955;
     border: 0;
     outline: none;
-    overflow: hidden;
+
     font-weight: 600;
     border-radius: 3rem;
-    transition: 0.5s;
+    
 }
 
 .submit_btn:hover {
