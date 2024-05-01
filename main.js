@@ -4,54 +4,48 @@ const password1 = document.getElementById('password1');
 const email = document.getElementById('email');
 
 const form = document.getElementById('form');
-const errorElement = document.getElementById('error');
+/* const errorElement = document.getElementById('error');
 const errorElementpassword = document.getElementById('errorP');
 const errorElementpassword1 = document.getElementById('errorP1');
-const errorElementEmail= document.getElementById('errorEm');
+const errorElementEmail= document.getElementById('errorEm'); */
 
 form.addEventListener('submit', (e) => {
 
   //write the validation messages
   
-
-
-
-
-  
-  
-    
     e.preventDefault();
-    if(checkRequired([names, email, password, password1])){
-     
-      //get and show each error
+      checkRequired([names, email])    
+        checkLength(password1 ,6,20);
+        checkEmail(email);
+        if( checkLength(password, 6, 20) && checkEmail(email) &&  checkPasswordsMatch(password, password1) ) {
+          console.log("Success");
+          
+        }  
       
-     
-      checkEmail(email) ;
-      checkLength(password, 6, 20);
-      checkPasswordsMatch(password, password1);
-     /*  if(checkEmail(email)  && checkLength(password, 6, 20) &&  checkPasswordsMatch(password, password1)) {
-        console.log("Success");
-      }  */
-    }
+      
+      
+    
+      
+    
   
 
 })
 
 function checkEmail(input) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  //let passed = false;
+  let passed = false;
   if (re.test(input.value.trim())) {
     showSuccess(input);
-    //passed = true;
+    passed = true;
   } else {
     showError(input, 'Email is not valid');
   }
-  //return passed;
+  return passed;
 }
 
 
 function checkLength(input, min, max) {
-  //let passed = false;
+  let passed = false;
   if (input.value.length < min) {
     showError(
       input,
@@ -62,17 +56,20 @@ function checkLength(input, min, max) {
       `${getFieldName(input)} must be less than ${max} characters`);
   } else {
     showSuccess(input);
-    //passed = true;
+    passed = true;
   }
-  //return passed;
+  return passed;
 }
 
 function checkPasswordsMatch(input1, input2) {
-  //let passed = false;
+  let passed = false;
     if (input1.value !== input2.value) {
       showError(input2, 'Passwords do not match');
-    }//else passed = true;
-    //return passed;
+    }else {
+      showSuccess(input2);
+      passed = true;
+    }
+    return passed;
 }
 
 
